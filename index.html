@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/index.css" />
+    <script defer type="module" src="/src/js/controller.js"></script>
+    <title>Recipe FInder</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <h1>🧀 Finder</h1>
+
+        <form>
+          <input
+            class="search_input"
+            type="text"
+            placeholder="Search of recipes...."
+          />
+          <button class="btn">Search</button>
+        </form>
+
+        <div class="cart">
+          <span>1</span>
+        </div>
+      </div>
+
+      <div class="results">
+        <div class="welcome-message">
+          <p>Start by searching for recipes 👆🏻...</p>
+        </div>
+
+        <!-- <div class="spinner">
+            <p>Loading....</p>
+          </div> -->
+
+        <!-- <div class="middle">
+          <a href="">
+            <div class="recipe">
+              <img src="/src/img/hero-bg.jpg" alt="" />
+              <h1>Recipe</h1>
+              <p>BBC GOOD FOOD</p>
+            </div>
+          </a>
+        </div> -->
+      </div>
+
+      <div class="pagination">
+        <button data-type="prev" class="btn">Previous</button>
+        <p class="currentPage"></p>
+        <button data-type="next" class="btn">Next</button>
+      </div>
+    </div>
+  </body>
+</html>
