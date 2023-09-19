@@ -75,18 +75,14 @@ const controlRecipe = async () => {
   }
 };
 
-// const controlModal = () => {
-//   console.log("Close Modal");
-// };
-
 const init = () => {
   searchView.addHandleSearch(searchHandler);
   paginationView.getRecipe(controlPagination);
-  // modalView.closeModal(controlModal);
+  modalView.closeModal();
 };
 
 init();
 
-["hashchange", "load"].forEach((ev) =>
-  window.addEventListener(ev, controlRecipe)
+["hashchange", "load"].forEach((el) =>
+  window.addEventListener(el, controlRecipe)
 );

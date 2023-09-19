@@ -216,7 +216,7 @@ form > input:focus {
 
 .bottom-modal {
   background: orange;
-  padding: 10px 3rem;
+  padding: 10px 1.5rem;
 
   display: flex;
   flex-direction: column;
@@ -234,6 +234,8 @@ form > input:focus {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 10px;
+  height: 400px;
+  overflow-y: scroll;
 }
 
 .ingredients-lists li {

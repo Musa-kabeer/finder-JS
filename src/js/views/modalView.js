@@ -1,6 +1,4 @@
-import Views from "./views";
-
-class ModalView extends Views {
+class ModalView {
   _parentElement = document.querySelector(".overlay");
 
   render(recipe) {
@@ -15,16 +13,15 @@ class ModalView extends Views {
     this._parentElement.classList.remove("hidden");
   }
 
-  //   closeModal(handler) {
-  //     this._parentElement.querySelector(".btn--backward").addEventListener(
-  //       "click",
-  //       () => {
-  //         this._parentElement.classList.add("hidden");
-  //         handler();
-  //       },
-  //       true
-  //     );
-  //   }
+  closeModal() {
+    this._parentElement.addEventListener("click", function (e) {
+      const btn = e.target.className;
+
+      if (btn === "btn--backward") {
+        document.querySelector(".overlay").classList.add("hidden");
+      }
+    });
+  }
 
   _generateMarkup(recipe) {
     return `
