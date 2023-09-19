@@ -48,3 +48,24 @@ export const searchPageReturnPages = (page = 1) => {
 
   return state.recipes.results.slice(start, end);
 };
+
+export const searchRecipe = async (id) => {
+  try {
+    const res = await fetch(`${API}${id}`);
+
+    const data = await res.json();
+
+    let recipe = data.data.recipe;
+
+    recipe = {
+      image: recipe.image_url,
+      title: recipe.title,
+      publisher: recipe.publisher,
+      ingredients: recipe.ingredients,
+    };
+
+    return recipe;
+  } catch (err) {
+    throw err;
+  }
+};

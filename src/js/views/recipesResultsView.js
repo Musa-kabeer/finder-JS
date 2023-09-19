@@ -39,7 +39,7 @@ class RecipesResultsView extends Views {
 
   _generateMarkup(recipe) {
     return `
-    <a href="/recipe/${recipe.id}">
+    <a href="#${recipe.id}">
       <div class="recipe">
         <img src="${recipe.image}" alt="${recipe.title}" />
         <h1>${recipe.title.split(" ")[0]} ${recipe.title.split(" ")[1]}</h1>

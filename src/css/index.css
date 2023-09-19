@@ -6,9 +6,11 @@
   border: none;
   outline: none;
   text-decoration: none;
+  list-style: none;
 }
 
 body {
+  position: relative;
   font-family: "Lora", serif;
   height: 100vh;
   font-size: 73%;
@@ -29,10 +31,11 @@ body {
 
 .top {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #dcb23ddb;
   height: 70px;
+  padding: 0 3rem;
 
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -49,12 +52,11 @@ body {
 }
 
 form {
-  width: 40%;
   padding: 10px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
 }
 
 form > input {
@@ -72,7 +74,6 @@ form > input:focus {
 }
 
 .btn {
-  width: 13%;
   padding: 7px;
   font-size: 19px;
   border-radius: 2px;
@@ -147,7 +148,99 @@ form > input:focus {
   height: 8%;
 }
 
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #4c472be0;
+  backdrop-filter: blur(2px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal {
+  width: 90%;
+  height: 90%;
+  background: #ffffffde;
+  border-radius: 4px;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 300px 1fr;
+}
+
+.top-modal {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.top-modal h3 {
+  padding: 5px 9px;
+  font-size: 25px;
+  background: linear-gradient(to top left, #de9204e8, #a7a706ee);
+  transform: rotate(-5deg);
+  color: #fff;
+  text-align: center;
+}
+
+.top-modal button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #de9204e8;
+  font-size: 25px;
+  font-weight: 900;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+}
+
+.bottom-modal {
+  background: orange;
+  padding: 10px 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bottom-modal h2 {
+  font-size: 25px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.ingredients-lists {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.ingredients-lists li {
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .hidden {
-  cursor: not-allowed;
-  background-color: #171717cd;
+  display: none;
 }
